@@ -1,0 +1,146 @@
+// DAY1
+//  QUE1  Difference between “ == “ and “ === “ operators.
+
+// == operator is used to compare the  value inside variable
+    var a = 2, b = "2";
+    var res  = a == b;
+    console.log(res);
+    
+// === operator used to compare the datatype of the variable.
+
+    var a = 2, b = "2";
+    var res  = a === b;
+    console.log(res);  
+
+// QUE2 What are the differences between var, let and const?
+
+    // var can be reassign and redeclare
+        // Using var
+var name = "Alice";
+console.log(name); // Output: Alice
+var name = "Bob";  // Redeclaration allowed
+console.log(name); // Output: Bob
+
+
+//  let Can be reassigned but not redeclared in the same scope
+
+//  let a  = 25 , a = 30;
+//  console.log(age); // a has already declared
+
+// const Cannot be reassigned or redeclared 
+
+ const c =1;
+ c = 2;
+ console.log(c); // Assignment to constant variable
+ 
+ 
+ 
+ 
+ 
+
+
+//  Que 3 What is execution context
+//  Que4 What is creation phase and execution phase.
+
+// Creation Phase: JavaScript sets up memory for variables and functions.
+// Execution Phase: JavaScript executes the code line by line.
+
+
+// QUE 5 What is hoisting?
+
+// Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+var a;    // Declaration is hoisted to the top
+console.log(a); // undefined
+a = 10;       // Assignment happens here
+console.log(a); //10
+// Only the declaration (var a) is hoisted, but the assignment (a = 10) remains in place.
+
+
+// QUE6 Difference between undefined vs not defined vs NaN
+// NaN: Not a number: As the name implies, it is used to denote that the value of an object is not a number. There are many ways that you can generate this error, one being invalid math opertaions such as 0/0 or sqrt(-1)
+
+// undefined: It means that the object doesn't have any value, therefore undefined. This occurs when you create a variable and don't assign a value to it.
+// not defined :  A variable that has not been declared at all is not defined 
+
+
+// QUE7 How many operators do we have in JS ? 
+
+/* Arithmetic Operators
+%,- , +,/, *
+
+Comparison Operators
+==, ===, !=, !==, >, <, >=, <=
+
+Bitwise Operators
+Bitwise And - a&b
+Bitwise OR - a|b
+Bitwise XOR - a^b
+Bitwise NOT - ~a
+Left Shift - a << b
+Sign Propagating Right Shift - a >> b
+Zero fill Right shift - a >>> b
+
+Increment,Decrement Operators
+Postfix increment - a++
+Prefix increment - ++a
+
+Postfix decrement - a--
+Prefix decrement - --a
+
+
+Logical Operators
+&&, ||, !
+
+Ternary Operators
+Condition ? Val1 : val2
+
+
+// QUE8 Explain Local Scope, Block Scope, Functional Scope and Scope Chain in javascript
+
+Local Scope:
+A variable declared inside a function is local to that function and cannot be accessed outside it.
+
+function greet() {
+    let message = "Hello";
+    console.log(message); //  Accessible
+}
+greet();
+console.log(message); //  Error: message is not defined
+
+
+Block Scope:
+A variable declared using let or const inside a block {} is only accessible within that block.
+
+
+if (true) {
+    let age = 25;
+    console.log(age); //  Accessible
+}
+console.log(age); //  Error: age is not defined
+Function Scope:
+A variable declared with var inside a function is only accessible inside that function.
+
+function example() {
+    var x = 10;
+    console.log(x); //  Accessible
+}
+example();
+console.log(x); //  Error: x is not defined
+Scope Chain:
+When JavaScript cannot find a variable in the current scope, it looks up in the parent scopes until it reaches the global scope.
+
+
+let globalVar = "I am global";
+
+function outer() {
+    let outerVar = "I am outer";
+
+    function inner() {
+        console.log(globalVar); //  Found in global scope
+        console.log(outerVar);  //  Found in outer function scope
+    }
+
+    inner();
+}
+
+outer(); */
